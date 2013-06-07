@@ -1,0 +1,9 @@
+{% extends 'prueba3.html' %}
+{% block content %}
+<h1>Formulario de usuario</h1>
+<form action="." method="POST">
+    {{ form }}
+    {% csrf_token %}
+    <input type="submit" value="Guardar" />
+</form>
+{% endblock %}
