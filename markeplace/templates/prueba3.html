@@ -1,7 +1,8 @@
 {% load staticfiles %}
 <!DOCTYPE>
 <head>
-<title>Prueba </title>
+<title>Base Prueba </title>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
 <link rel="stylesheet" href='{% static "style.css" %}'/>
 </head>
 
@@ -14,9 +15,9 @@
     
     <div> <nav>
     <ul>
-    <li><a href="#">Menu Option 1</a></li>
+    <li><a href="{% url 'home' %}">Home</a></li>
     <li><a href="#">Menu Option 2</a></li>
-    <li><a href="#">Menu Option 3</a></li>
+    <li><a href="{% url 'nuevo' %}">Registrar</a></li>
     </ul>
     </nav></div>
     
@@ -46,6 +47,8 @@
     <!-- end .sidebar1 --></div>
   <div class="content">
     <h1>Instrucciones</h1>
+    {% block content %}
+    {% endblock %}
     </div>
   <div class="footer">
     <p>Este .footer contiene la declaración position:relative; para dar a Internet Explorer 6 hasLayout para .footer y provocar que se borre correctamente. Si no es necesario proporcionar compatibilidad con IE6, puede quitarlo.</p>

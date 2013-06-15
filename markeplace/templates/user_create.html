@@ -1,9 +1,27 @@
-{% extends 'prueba3.html' %}
+{% extends 'index.html' %}
 {% block content %}
+<center>
 <h1>Formulario de usuario</h1>
-<form action="." method="POST">
-    {{ form }}
+<form class="form-horizontal" action="" method="POST">
+    {% for field in form %}
+    <div class="control-group {% if field.errors %}error{% endif %}" >
+        <label class="control-label">
+        {{ field.label }}</label>
+        <div class="controls">
+            {{ field }}
+            <span class="help-inline">{{ field.errors }}</span>
+        </div>
+    </div>
+    {% endfor %}
     {% csrf_token %}
-    <input type="submit" value="Guardar" />
+      <div class="control-group">
+        <div class="controls">
+            <button type="submit" class="btn">Guardar</button>
+        </div>
+    </div>
 </form>
+</center>
 {% endblock %}
+
+
+

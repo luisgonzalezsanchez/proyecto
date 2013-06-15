@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block titulo %}Bienvenido{% endblock %}
+{% block encabezado %} 
+	<h1>Bienvenido</h1>
+{% endblock %}
+{% block conect %}
+<p>Bienvenido {{usuario.username|upper}}   Ultima sesion{{usuario.last_login}} <a href="/cerrar">Cerrar Sesion</a>
+   </p>  
+	
+{% endblock %}
+{% block content %}
+<h1>sera que se ve</h1>
+{% endblock %}

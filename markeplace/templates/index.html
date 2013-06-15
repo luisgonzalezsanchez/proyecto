@@ -1,0 +1,49 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="curso html5 desde 0" />
+    <link rel="stylesheet" href='{% static "estyle.css" %}'/>
+    <title>Markeplace</title>
+</head>
+<body>
+<header>
+     <hgroup>
+     
+     <li>
+     <div class="logo"><img src="https://sites.google.com/a/sectoriales.co/noticias/_/rsrc/1371296429088/listado-de-noticias/torneodebillarentintalplaza/Billar.jpg?height=400&width=196" width="200" height="200"></img></div></li> 
+     <li>
+       <div id="titulo">
+         <h1>Markeplace venta de cosas usadas</h1>
+        </div>
+     </li>
+     </ul>
+    
+   </hgroup>
+  <nav>
+     <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/ingresar">Publicaciones Recientes</a></li>
+        <li><a href="/user/add">Registro</a></li>
+        <li><a href="#">Contacto</a></li>
+     </ul>
+ {% block conect %}
+ {% endblock %}
+  </nav>
+</header>
+
+<article>
+    {% block content %}
+    {% endblock %}
+</article>
+<aside>
+{% block sesion %}
+{% endblock %}
+
+</aside>
+<footer>
+     <p>Aqui va el Pie de pagina, copyright, el menu otravez, etc.</p> </footer>
+</body>
+</html>
